@@ -10,6 +10,8 @@
 
 v1.0.7 - "Baby's First XSS Vulnerability"
 
+Slighty Modified by Per Starke
+
 ( NOTE TO SELF: When updating version, remember to edit... )
 ( this js file's "Nutshell.version", include_nutshell.js   )
 ( and README.md what translations finished                 )
