@@ -10,7 +10,7 @@
 
 v1.0.7 - "Baby's First XSS Vulnerability"
 
-Slighty Modified by Per Starke
+Slightly Modified by Per Starke Web Development
 
 ( NOTE TO SELF: When updating version, remember to edit... )
 ( this js file's "Nutshell.version", include_nutshell.js   )
@@ -697,7 +697,6 @@ Bubble: the box that expands below an expandable, containing a Nutshell Section
                 // Insert a bubble
                 //debugger;
                 let clickX = mouseEvent.clientX - ex.parentNode.getBoundingClientRect().x; // relative to parent, I guess???
-                bubble = Nutshell.createBubble(ex, clickX);
                 ex.parentNode.insertBefore(bubble, punctuation.nextSibling); // place the bubble AFTER PUNCTUATION
                 ex.setAttribute("mode", "open");
                 ex.updateFollowupText();
