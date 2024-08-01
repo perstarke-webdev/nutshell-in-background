@@ -10,7 +10,7 @@
 
 v1.0.7 - "Baby's First XSS Vulnerability"
 
-Slightly Modified by Per Starke Web Dev
+! Don't embed headings !
 
 ( NOTE TO SELF: When updating version, remember to edit... )
 ( this js file's "Nutshell.version", include_nutshell.js   )
@@ -194,7 +194,7 @@ Bubble: the box that expands below an expandable, containing a Nutshell Section
     Nutshell.options = {
         startOnLoad: true, // Start Nutshell on load? (default: true)
         lang: 'en', // Language (default: 'en', which is English)
-        dontEmbedHeadings: false, // If 'true', removes the "embed this as a nutshell" option on headings
+        dontEmbedHeadings: true, // If 'true', removes the "embed this as a nutshell" option on headings
     };
 
     // A semantic sugar function to override options
@@ -697,6 +697,7 @@ Bubble: the box that expands below an expandable, containing a Nutshell Section
                 // Insert a bubble
                 //debugger;
                 let clickX = mouseEvent.clientX - ex.parentNode.getBoundingClientRect().x; // relative to parent, I guess???
+                bubble = Nutshell.createBubble(ex, clickX);
                 ex.parentNode.insertBefore(bubble, punctuation.nextSibling); // place the bubble AFTER PUNCTUATION
                 ex.setAttribute("mode", "open");
                 ex.updateFollowupText();
